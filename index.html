@@ -1,0 +1,244 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="inicio">
+        <h1>Biblioteca Digital</h1>
+        <p>Conhecimento e leitura ao alcance de todos</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#livros">Livros</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#unidades">Unidades</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main>
+        <section class="boas-vindas">
+            <h2>Bem-vindo à nossa biblioteca!</h2>
+            <p>Explore nosso acervo e descubra novos conhecimentos por meio da leitura.</p>
+        </section>
+
+        <section id="livros">
+            <h2>Nosso Acervo</h2>
+            <p>Encontre histórias, clássicos da literatura e livros para todos os gostos.</p>
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar por título ou autor..."
+                aria-label="Pesquisar livros por título ou autor"
+            >
+
+            <div class="livros-container">
+                <article class="livro">
+                    <div class="capa capa1">
+                    <img src="imagens/dom-casmurro.jpg" alt="Capa de Dom Casmurro">
+</div>
+                    <h3>Dom Casmurro</h3>
+                    <p>Autor: Machado de Assis</p>
+                    <button type="button" onclick="selecionarLivro('Dom Casmurro')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa2">
+    <img src="imagens/o pequeno-principe.jpg" alt="Capa de O Pequeno Príncipe">
+</div>
+                    <h3>O Pequeno Príncipe</h3>
+                    <p>Autor: Antoine de Saint-Exupéry</p>
+                    <button type="button" onclick="selecionarLivro('O Pequeno Príncipe')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                   <div class="capa capa3">
+    <img src="imagens/memorias.jpg" alt="Capa de Memórias Póstumas de Brás Cubas">
+</div>
+                    <h3>Memórias Póstumas de Brás Cubas</h3>
+                    <p>Autor: Machado de Assis</p>
+                    <button type="button" onclick="selecionarLivro('Memórias Póstumas de Brás Cubas')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa2">
+    <img src="imagens/o-cortico.jpg" alt="Capa de O Cortiço">
+</div>
+                    <h3>O Cortiço</h3>
+                    <p>Autor: Aluísio Azevedo</p>
+                    <button type="button" onclick="selecionarLivro('O Cortiço')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa1">
+    <img src="imagens/iracema.jpg" alt="Capa de Iracema">
+</div>
+                    <h3>Iracema</h3>
+                    <p>Autor: José de Alencar</p>
+                    <button type="button" onclick="selecionarLivro('Iracema')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                   <div class="capa capa3">
+    <img src="imagens/capitaes-da-areia.jpg" alt="Capa de Capitães da Areia">
+</div>
+                    <h3>Capitães da Areia</h3>
+                    <p>Autor: Jorge Amado</p>
+                    <button type="button" onclick="selecionarLivro('Capitães da Areia')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa1">
+    <img src="imagens/harry-potter.jpg" alt="Capa de Harry Potter e a Pedra Filosofal">
+</div>
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Autora: J. K. Rowling</p>
+                    <button type="button" onclick="selecionarLivro('Harry Potter e a Pedra Filosofal')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                   <div class="capa capa2">
+    <img src="imagens/o-hobbit.jpg" alt="Capa de O Hobbit">
+</div>
+                    <h3>O Hobbit</h3>
+                    <p>Autor: J. R. R. Tolkien</p>
+                    <button type="button" onclick="selecionarLivro('O Hobbit')">Ver livro</button>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa3">
+    <img src="imagens/extraordinario.jpg" alt="Capa de Extraordinário">
+</div>
+                    <h3>Extraordinário</h3>
+                    <p>Autora: R. J. Palacio</p>
+                    <button type="button" onclick="selecionarLivro('Extraordinário')">Ver livro</button>
+                </article>
+            </div>
+
+            <p id="semResultados" hidden>Nenhum livro encontrado. Tente outro título ou autor.</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre o Projeto</h2>
+            <p>
+                A Biblioteca Digital é um projeto acadêmico desenvolvido para
+                facilitar a consulta ao acervo e incentivar o hábito da leitura.
+                A proposta é apresentar os livros de maneira simples, organizada
+                e acessível, permitindo que os visitantes pesquisem títulos e autores.
+            </p>
+        </section>
+
+        <section id="unidades">
+            <h2>Nossas Unidades</h2>
+            <p>Conheça os espaços pensados para leitura, aprendizagem e estudo.</p>
+
+            <div class="livros-container">
+                <article class="livro">
+                    <div class="capa capa1">🏛️</div>
+                    <h3>Unidade Central</h3>
+                    <p>Espaço para consulta ao acervo e leitura.</p>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa2">🧸</div>
+                    <h3>Unidade Infantil</h3>
+                    <p>Um ambiente dedicado à imaginação e à leitura infantil.</p>
+                </article>
+
+                <article class="livro">
+                    <div class="capa capa3">📖</div>
+                    <h3>Unidade de Estudos</h3>
+                    <p>Ambiente para concentração, pesquisa e aprendizado.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Envie suas dúvidas ou sugestões para a nossa biblioteca.</p>
+
+            <form id="formContato">
+                <label for="nome">Nome:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+                <label for="email">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Escreva sua mensagem"
+                    rows="4"
+                    required
+                ></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+                <p id="retornoContato" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Biblioteca Digital | Projeto Acadêmico UniFECAF</p>
+        <p>Incentivando o conhecimento por meio da leitura.</p>
+    </footer>
+
+    <script>
+        const campoPesquisa = document.getElementById("pesquisa");
+        const livros = document.querySelectorAll("#livros .livro");
+        const semResultados = document.getElementById("semResultados");
+
+        campoPesquisa.addEventListener("input", function () {
+            const termo = campoPesquisa.value.toLowerCase().trim();
+            let encontrados = 0;
+
+            livros.forEach(function (livro) {
+                const conteudo = livro.textContent.toLowerCase();
+                const corresponde = conteudo.includes(termo);
+
+                livro.hidden = !corresponde;
+
+                if (corresponde) {
+                    encontrados++;
+                }
+            });
+
+            semResultados.hidden = encontrados > 0;
+        });
+
+        function selecionarLivro(titulo) {
+            alert("Você selecionou o livro: " + titulo);
+        }
+
+        document.getElementById("formContato").addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            document.getElementById("retornoContato").textContent =
+                "Mensagem demonstrativa enviada com sucesso!";
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
