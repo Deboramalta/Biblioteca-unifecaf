@@ -1,313 +1,359 @@
-
-/* CONFIGURAÇÕES GERAIS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-behavior: smooth
 }
 
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f5ef;
-    color: #333333;
-    line-height: 1.6;
+    color: #173a36;
+    background: #f4f8f7;
+    line-height: 1.6
 }
 
-/* CABEÇALHO */
-header {
-    background: linear-gradient(135deg, #174d36, #327653);
-    color: #ffffff;
-    text-align: center;
-    padding: 45px 20px;
+a {
+    color: inherit
 }
 
-header h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
-}
-
-header p {
-    font-size: 17px;
-}
-
-/* MENU DE NAVEGAÇÃO */
-nav {
-    background-color: #123c2a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 14px;
+.top {
+    background: #102d2c;
+    color: white;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 3
+}
+
+.top-inner,
+.section-wrap {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 24px
+}
+
+.top-inner {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.brand {
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-decoration: none
+}
+
+.brand span {
+    color: #65d9b4
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap
 }
 
 nav a {
-    color: #ffffff;
     text-decoration: none;
-    padding: 9px 14px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-size: 14px
 }
 
 nav a:hover,
 nav a:focus-visible {
-    background-color: #397b56;
-    outline: none;
+    text-decoration: underline
 }
 
-/* CONTEÚDO PRINCIPAL */
-main {
+.hero {
+    min-height: 350px;
+    background: linear-gradient(120deg, #dbf3e9, #eaf8fb);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 65px max(24px, calc((100vw - 1052px)/2))
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4.4vw, 55px);
+    line-height: 1.12;
+    max-width: 650px;
+    margin: 12px 0
+}
+
+.eyebrow {
+    letter-spacing: .2em;
+    font-size: 12px;
+    font-weight: 800;
+    color: #157b69
+}
+
+.hero-art {
+    text-align: center;
+    font-size: clamp(90px, 15vw, 170px)
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    background: #147d68;
+    color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px
+}
+
+.btn:hover {
+    background: #0b5548
+}
+
+.btn.light {
+    margin-top: 10px
+}
+
+.dark {
+    background: #193c3b;
+    color: white
+}
+
+.about,
+.catalog,
+.units,
+.contact {
+    padding: 64px 0
+}
+
+h2 {
+    font-size: clamp(26px, 3vw, 34px);
+    margin: 0 0 22px
+}
+
+h3 {
+    margin: 12px 0 8px
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    align-items: center;
+    gap: 25px
+}
+
+.about-icon {
+    text-align: center;
+    font-size: 100px
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px
+}
+
+.features span {
+    background: #2b5551;
+    padding: 16px;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: 700
+}
+
+.banner {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(120deg, #cce7e0, #f5eac9)
+}
+
+.banner h2 {
+    margin-bottom: 4px
+}
+
+.section-lead {
+    margin-top: -10px;
+    color: #c9e3db
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px
+}
+
+.book {
+    background: #f8fbfa;
+    color: #193b38;
+    padding: 18px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0
+}
+
+.book img {
     width: 100%;
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 25px 20px;
+    height: 225px;
+    object-fit: contain;
+    background: #e7eeeb;
+    border-radius: 5px
+}
+
+.book h3 {
+    font-size: 18px;
+    line-height: 1.3
+}
+
+.book p {
+    margin: 0 0 15px;
+    font-size: 14px
+}
+
+.book .btn {
+    margin-top: auto
+}
+
+.units {
+    background: #102b2b;
+    color: #fff
+}
+
+.unit {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 30px;
+    align-items: center;
+    margin: 20px 0
+}
+
+.unit-art {
+    min-height: 170px;
+    background: #d5e8e3;
+    color: #183c37;
+    display: grid;
+    place-items: center;
+    font-size: 72px;
+    border-radius: 4px
+}
+
+.unit p {
+    max-width: 550px
+}
+
+.contact {
+    background: #e5efec
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center
+}
+
+.contact-art {
+    min-height: 190px;
+    background: #c5ded5;
+    display: grid;
+    place-items: center;
+    font-size: 90px;
+    border-radius: 5px
+}
+
+footer {
+    text-align: center;
+    background: #102b2b;
+    color: white;
+    padding: 22px;
+    font-size: 13px
 }
 
 section {
-    background-color: #ffffff;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    scroll-margin-top: 70px
 }
 
-section h2 {
-    color: #205b3d;
-    font-size: 27px;
-    margin-bottom: 12px;
-}
-
-section > p {
-    margin-bottom: 20px;
-}
-
-/* BOAS-VINDAS */
-.boas-vindas {
-    text-align: center;
-    padding: 45px 25px;
-    background: linear-gradient(135deg, #e3efe5, #f5f7ed);
-}
-
-.boas-vindas h2 {
-    font-size: 30px;
-}
-
-/* CAMPO DE PESQUISA */
-#pesquisa {
-    display: block;
-    width: 100%;
-    padding: 13px 15px;
-    margin: 20px 0 25px;
-    border: 1px solid #b9c9bd;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #ffffff;
-}
-
-#pesquisa:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid #397b56;
-    outline-offset: 2px;
-}
-
-/* GRADE DE LIVROS E UNIDADES */
-.livros-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.livro {
-    background-color: #fbfcf9;
-    border: 1px solid #e0e8df;
-    border-radius: 10px;
-    padding: 18px;
-    text-align: center;
-    min-width: 0;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.livro:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.09);
-}
-
-.livro[hidden] {
-    display: none;
-}
-
-.livro h3 {
-    color: #24583b;
-    font-size: 18px;
-    margin: 12px 0 6px;
-}
-
-.livro p {
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* CAPAS ILUSTRATIVAS */
-.capa {
-    min-height: 155px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 58px;
-    margin-bottom: 12px;
-}
-
-.capa1 {
-    background-color: #e4eee0;
-}
-
-.capa2 {
-    background-color: #e5eaf5;
-}
-
-.capa3 {
-    background-color: #f4e6d8;
-}
-
-/* BOTÕES */
-button {
-    background-color: #276744;
-    color: #ffffff;
-    border: none;
-    border-radius: 7px;
-    padding: 11px 18px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-button:hover {
-    background-color: #17452d;
-}
-
-button:focus-visible {
-    outline: 3px solid #8bb99a;
-    outline-offset: 3px;
-}
-
-/* FORMULÁRIO DE CONTATO */
-#contato form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 650px;
-}
-
-#contato label {
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-#contato input,
-#contato textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #c7d3c8;
-    border-radius: 7px;
-    font-family: inherit;
-    font-size: 16px;
-}
-
-#contato textarea {
-    resize: vertical;
-}
-
-#contato button {
-    align-self: flex-start;
-    margin-top: 8px;
-}
-
-#retornoContato {
-    color: #205b3d;
-    font-weight: bold;
-}
-
-/* RODAPÉ */
-footer {
-    background-color: #123c2a;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 10px;
-}
-
-footer p + p {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-/* ADAPTAÇÃO PARA TABLETS */
-@media (max-width: 850px) {
-    .livros-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+@media(max-width:800px) {
+    .books {
+        grid-template-columns: repeat(2, 1fr)
     }
 
-    header h1 {
-        font-size: 32px;
+    .about-grid {
+        grid-template-columns: 1fr 120px 1fr
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr)
     }
 }
 
-/* ADAPTAÇÃO PARA CELULARES */
-@media (max-width: 550px) {
-    header {
-        padding: 30px 15px;
-    }
-
-    header h1 {
-        font-size: 28px;
+@media(max-width:550px) {
+    .top-inner {
+        flex-direction: column;
+        padding: 14px;
+        gap: 9px
     }
 
     nav {
-        gap: 4px;
-        padding: 10px 5px;
+        justify-content: center;
+        gap: 13px
     }
 
-    nav a {
-        padding: 8px;
-        font-size: 14px;
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 48px 22px
     }
 
-    main {
-        padding: 15px 10px;
+    .hero-art {
+        font-size: 90px
+    }
+
+    .about,
+    .catalog,
+    .units,
+    .contact {
+        padding: 45px 0
+    }
+
+    .about-grid,
+    .contact-grid,
+    .unit {
+        grid-template-columns: 1fr
+    }
+
+    .about-icon {
+        font-size: 65px
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .books {
+        grid-template-columns: 1fr
+    }
+
+    .book img {
+        height: 250px
+    }
+
+    .unit {
+        gap: 10px
+    }
+
+    .unit-art {
+        min-height: 135px
+    }
+
+    .contact-art {
+        min-height: 120px
     }
 
     section {
-        padding: 20px 15px;
+        scroll-margin-top: 115px
     }
-
-    section h2,
-    .boas-vindas h2 {
-        font-size: 23px;
-    }
-
-    .livros-container {
-        grid-template-columns: 1fr;
-    }
-
-    .capa {
-        min-height: 130px;
-    }
-}
-.capa img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    border-radius: 7px;
 }
