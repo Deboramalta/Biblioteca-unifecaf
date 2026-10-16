@@ -9,8 +9,8 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #173a36;
-    background: #f4f8f7;
+    color: #183153;
+    background: #f4f7fc;
     line-height: 1.6
 }
 
@@ -19,7 +19,7 @@ a {
 }
 
 .top {
-    background: #102d2c;
+    background: #092b62;
     color: white;
     position: sticky;
     top: 0;
@@ -48,7 +48,7 @@ a {
 }
 
 .brand span {
-    color: #65d9b4
+    color: #8dc9ff
 }
 
 nav {
@@ -69,7 +69,7 @@ nav a:focus-visible {
 
 .hero {
     min-height: 350px;
-    background: linear-gradient(120deg, #dbf3e9, #eaf8fb);
+    background: linear-gradient(120deg, #dbeaff, #edf6ff);
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     align-items: center;
@@ -88,7 +88,7 @@ nav a:focus-visible {
     letter-spacing: .2em;
     font-size: 12px;
     font-weight: 800;
-    color: #157b69
+    color: #1459a6
 }
 
 .hero-art {
@@ -99,7 +99,7 @@ nav a:focus-visible {
 .btn {
     display: inline-block;
     border-radius: 6px;
-    background: #147d68;
+    background: #155bb4;
     color: #fff;
     padding: 10px 18px;
     text-decoration: none;
@@ -108,7 +108,7 @@ nav a:focus-visible {
 }
 
 .btn:hover {
-    background: #0b5548
+    background: #0c397c
 }
 
 .btn.light {
@@ -116,7 +116,7 @@ nav a:focus-visible {
 }
 
 .dark {
-    background: #193c3b;
+    background: #10376d;
     color: white
 }
 
@@ -156,7 +156,7 @@ h3 {
 }
 
 .features span {
-    background: #2b5551;
+    background: #28518b;
     padding: 16px;
     text-align: center;
     border-radius: 7px;
@@ -166,7 +166,7 @@ h3 {
 .banner {
     text-align: center;
     padding: 65px 20px;
-    background: linear-gradient(120deg, #cce7e0, #f5eac9)
+    background: linear-gradient(120deg, #cfe3ff, #f3f7ff)
 }
 
 .banner h2 {
@@ -175,7 +175,7 @@ h3 {
 
 .section-lead {
     margin-top: -10px;
-    color: #c9e3db
+    color: #d1e5ff
 }
 
 .books {
@@ -185,8 +185,8 @@ h3 {
 }
 
 .book {
-    background: #f8fbfa;
-    color: #193b38;
+    background: #f8fbff;
+    color: #183153;
     padding: 18px;
     border-radius: 8px;
     display: flex;
@@ -200,7 +200,7 @@ h3 {
     width: 100%;
     height: 225px;
     object-fit: contain;
-    background: #e7eeeb;
+    background: #e6eef9;
     border-radius: 5px
 }
 
@@ -219,7 +219,7 @@ h3 {
 }
 
 .units {
-    background: #102b2b;
+    background: #092b62;
     color: #fff
 }
 
@@ -233,8 +233,8 @@ h3 {
 
 .unit-art {
     min-height: 170px;
-    background: #d5e8e3;
-    color: #183c37;
+    background: #d8e9ff;
+    color: #183153;
     display: grid;
     place-items: center;
     font-size: 72px;
@@ -246,7 +246,7 @@ h3 {
 }
 
 .contact {
-    background: #e5efec
+    background: #e7f0fc
 }
 
 .contact-grid {
@@ -258,7 +258,7 @@ h3 {
 
 .contact-art {
     min-height: 190px;
-    background: #c5ded5;
+    background: #c9def9;
     display: grid;
     place-items: center;
     font-size: 90px;
@@ -267,7 +267,7 @@ h3 {
 
 footer {
     text-align: center;
-    background: #102b2b;
+    background: #092b62;
     color: white;
     padding: 22px;
     font-size: 13px
